@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+
+#root{
+  width: 100%;
+  height: auto;
+}
+
+
+// Scrollbar style
+::-webkit-scrollbar {
+  width: 14px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9E9D9D;
+  border-radius: 10px;
+  border: 3px solid #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9E9D9D; /* even darker gray for hover effect */
+}

@@ -1,0 +1,102 @@
+
+.cursive{
+    font-family: "Covered By Your Grace", cursive;
+}
+
+
+//For Hero
+
+.square-bg::before{
+    content: "";
+    background-image: url('../../assets/square-bg.png');
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    top: -100px;
+    right: -120px;
+    width: 80%;
+    height: 120%;
+    z-index: -1;
+
+}
+
+.slick-slider{
+    height: 45% !important;
+
+    margin-top: 15% !important;
+    
+}
+
+.slick-dots {
+    width:auto !important;
+    margin-top: 0rem !important;
+}
+
+.slick-dots li{
+    margin: 0 !important;
+}
+
+.slick-arrow{
+    display: none !important;
+}
+
+.slick-dots li button:before{
+    color: #E4E3E3 !important;
+    opacity: 1 !important;
+    font-size: 11px !important; //#CAD0CB
+
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before{
+    color: #CAD0CB !important; //#CAD0CB
+    opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before{
+    color: #2DA950 !important;
+    font-size: 11px;
+}
+
+
+
+//For Faq
+.gradient-mask{
+    
+    mask-image: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255, 0) 80%, rgba(255,255,255, 0) 90%);
+    // -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255, 0) 100%,rgba(255,255,255, 1) 0%);
+    //mask-image: linear-gradient(to bottom, #ffffff 11.45%, rgba(255, 255, 255, 0) 90.79%);
+
+}
+
+.mantine-Accordion-item{
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.mantine-Accordion-label{
+    color: #1C1C1C;
+    font-weight: 600;
+    font-size: 20px;
+
+    display:block !important;
+    text-align: left;
+    width: 78%;
+    word-wrap:break-word;
+
+    flex: none;
+}
+
+.mantine-Accordion-control {
+    padding: 0;
+    padding: 10px 0;
+    justify-content: space-between;
+}   
+
+.mantine-Accordion-control:hover {
+    background: rgba(0,0,0,0.1);
+    background: none;
+}  
+
+.mantine-Accordion-content{
+    padding: 0;
+    padding-bottom: 20px;
+}

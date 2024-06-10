@@ -1,0 +1,27 @@
+
+.textInput {
+  &::placeholder {
+    color: #827A7A;
+  }
+
+  &:focus {
+    background: #F5F8FF;
+  }
+}
+
+.disabledButton {
+  background-color: #C9C9C9;
+  color: #ffffff; 
+  cursor: not-allowed !important;
+}
+
+.disabledButton:hover {
+  background-color: #C9C9C9;
+}
+
+.error{
+  color: #FF0808;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
