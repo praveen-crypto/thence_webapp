@@ -9,7 +9,11 @@ import '@mantine/core/styles.css';
 //Import Pages Components
 import Landing from './pages/Landing/landing';
 import Register from './pages/Register/register';
-import NoMatch from './pages/NoMatch';
+import Onboard from './pages/Onboard/onboard';
+import NoMatch from './pages/no_Match';
+import TermsConditions from './pages/terms_Conditions';
+import PrivacyPolicy from './pages/privacy_Policy';
+
 
 function App() {
   
@@ -19,11 +23,16 @@ function App() {
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/onboard' element={<Onboard />} />
+          <Route path='/terms' element={<TermsConditions />} />
+          <Route path='/privacy' element={<PrivacyPolicy />} />
+
           <Route path="*" element={<NoMatch />} />
         </Routes>
       }
     </MantineProvider>
   )
 }
+
 
 export default App;

@@ -2,6 +2,7 @@
 //Components
 import Button from '../../components/Button/Button';
 import Slider from "react-slick";
+import Tilt from 'react-parallax-tilt';
 
 //Styles
 import './landing.scss';
@@ -35,7 +36,7 @@ function Navbar() {
 
                     <div className="nav-items flex gap-4 ">
                         <Button component="a" href='/register' label='Get Projects' variantType={'secondary'} className={` w-[190px] h-[77px] text-[18px] `} />
-                        <Button label='Onboard Talent' variantType={'primary'} className={` w-[220px] h-[77px] text-[18px] `} />
+                        <Button component="a" href='/onboard' label='Onboard Talent' variantType={'primary'} className={` w-[220px] h-[77px] text-[18px] `} />
                     </div>
                 </nav>
             </div>
@@ -73,19 +74,21 @@ function Hero() {
 
                     <div className='w-[50%] relative' >
                         <img className='rounded-[50px] ms-auto' src={hero} alt="" />
-
-                        <div className='w-[268px] h-[240px] absolute top-[125px] left-[-10px] bg-white rounded-[27px] p-7 shadow-lg'>
+                        
+                        <Tilt className='w-[268px] h-[240px] absolute top-[125px] left-[-10px] bg-white rounded-[27px] p-7 shadow-lg'>
                             <div className='header flex ' >
                                 <div className='spark' >
                                     <img className='w-[100px] h-auto absolute top-[-20px] left-[-10px] ' src={sparkle} alt="" />
                                 </div>
                                 <h3 className='switzer font-semibold text-[64px] text-[#1C1C1C]'>40%</h3>
                             </div>
-
+                            
                             <p className='description manrope font-medium text-[18px] text-[#828282] leading-[23px]'>
                                 Achieved reduction in project execution time by optimising team availability
                             </p>
-                        </div>
+                            {/* <div className='w-[268px] h-[240px] absolute top-[125px] left-[-10px] bg-white rounded-[27px] p-7 shadow-lg'>
+                            </div> */}
+                        </Tilt>
 
                         <div className='w-[245px] h-[88px] absolute bottom-[35px] left-[50px] bg-white rounded-[111px] shadow-lg flex p-3'>
                             <div className='icons w-[auto] h-auto my-auto ms-1' >
@@ -101,7 +104,7 @@ function Hero() {
                             </div>
                         </div>
 
-                        <div className='w-[290px] h-[240px] absolute bottom-[-50px] right-[-80px] bg-[#002E18] rounded-[27px] p-8 shadow-lg'>
+                        <Tilt className='w-[290px] h-[240px] absolute bottom-[-50px] right-[-80px] bg-[#002E18] rounded-[27px] p-8 shadow-lg'>
                             <div className='header flex ' >
                                 <h3 className='switzer font-semibold text-[64px] text-[#FFFFFF] '>$0.5</h3>
                                 <span className=' switzer text-[22px] text-[#A6A3A0] mt-auto mb-4 ms-2'>MILLION</span>
@@ -110,7 +113,7 @@ function Hero() {
                             <p className='description manrope font-normal text-[18px] text-[rgb(204,204,204,0.9)] leading-[23px]'>
                                 Reduced client expenses by saving on hiring and employee costs.
                             </p>
-                        </div>
+                        </Tilt>
                     </div>
 
                     <div className='w-[50%] flex flex-col justify-start ps-[14%] relative ' >
@@ -220,8 +223,8 @@ function Footer() {
                     </div>
 
                     <div className="manrope w-auto flex gap-14 my-auto me-8  text-[18px]">
-                        <a href='/' className='underline' >Terms & Conditions</a>
-                        <a href='/' className='underline'>Privacy Policy</a>
+                        <a href='/terms' className='underline' >Terms & Conditions</a>
+                        <a href='/privacy' className='underline'>Privacy Policy</a>
                     </div>
                 </footer>
             </div>
@@ -235,9 +238,9 @@ function Landing() {
     return (
         <div className='container'>
             <Navbar />
-
+            
             <Hero />
-
+        
             <Faq />
 
             <Footer />
